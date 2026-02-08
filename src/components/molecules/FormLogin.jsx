@@ -39,13 +39,10 @@ const FormLogin = () => {
         </Link>
       </div>
 
-      <Button
-        type="button"
-        variant="primary"
-        onClick={() => navigate("/")}
-      >
+      <Button type="button" variant="primary" onClick={() => navigate("/")}>
         Masuk
       </Button>
+
       <Button
         type="button"
         variant="secondary"

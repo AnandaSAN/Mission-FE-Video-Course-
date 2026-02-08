@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import LogoImage from "../../assets/images/LogoBelajar.png"; 
+import LogoImage from "../../assets/images/LogoBelajar.png";
 
 function Logo() {
   return (
