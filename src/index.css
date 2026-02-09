@@ -5,3 +5,12 @@
   --font-poppins: "Poppins", sans-serif;
   --font-dm-sans: "DM Sans", sans-serif;
 }
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
+}
