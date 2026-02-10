@@ -27,6 +27,7 @@ import ImgCard9 from "../assets/images/ImgCard9.jpg";
 
 import Logo from "../components/atom/Logo";
 import { Link } from "react-router";
+import Footer from "../components/layout/Footer";
 
 const content = [
   { id: 1, img: ImgCard1, profil: ProfilCard1 },
@@ -43,9 +44,9 @@ const content = [
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
+  return (  
     <div className="min-h-screen flex flex-col">
-      <header className="bg-white shadow-[20px_10px_40px_rgba(62,67,74,0.31)] relative w-full h-18.5 border border-[#3A35411F] md:shadow-none px-6 py-4 md:px-15 lg:px-30 lg:py-3 flex justify-between items-center">
+      <header className="bg-white shadow-[20px_10px_40px_rgba(62,67,74,0.31)] relative w-full h-18.5 border border-[#3A35411F] md:shadow-none px-6 py-4 md:px-15 lg:px-30 lg:py-3 flex justify-between items-center z-11">
         <Logo />
         <div className="hidden md:flex items-center space-x-6">
           <details className="relative">
@@ -61,7 +62,7 @@ const Home = () => {
                 className="w-10 h-10 rounded-[10px] border-none"
               />
             </summary>
-            <ul className="absolute md:right-0 mt-3 w-50 py-4 bg-white border rounded-br rounded-bl shadow-lg z-11">
+            <ul className="absolute md:right-0 mt-3 w-50 py-4 bg-white border rounded-br-[10px] rounded-bl-[10px] border-[#3A35411F] shadow-lg z-11">
               <li>
                 <Link
                   to=""
@@ -98,7 +99,7 @@ const Home = () => {
             </ul>
           </details>
         </div>
-
+        {/* Mobile Navbar Button */}
         <button
           className="md:hidden flex flex-col space-y-1"
           onClick={() => setIsOpen(!isOpen)}
@@ -107,10 +108,10 @@ const Home = () => {
           <span className="w-6 h-0.5 bg-gray-700"></span>
           <span className="w-6 h-0.5 bg-gray-700"></span>
         </button>
-      </header>
-
-      {isOpen && (
-        <div className="md:hidden absolute w-full top-18.5 bg-white shadow-lg z-11">
+        {/* Mobile Navbar List */}
+        <div
+          className={`md:hidden absolute w-full left-0 top-18.5 bg-white shadow-lg overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? "max-h-125 opacity-100 z-11" : "max-h-0 opacity-0 z-0"}`}
+        >
           <ul className="py-1 rounded-br rounded-bl bg-white shadow-lg z-1">
             <li>
               <Link
@@ -155,7 +156,7 @@ const Home = () => {
             </li>
           </ul>
         </div>
-      )}
+      </header>
 
       <main className="grow bg-[#fdf8f2] px-5 py-7 md:px-15 lg:px-30 lg:py-16">
         <div className="w-full relative overflow-hidden rounded-[10px] shadow-lg mx-auto text-white">
@@ -164,7 +165,7 @@ const Home = () => {
             alt="HeroBG"
             className="absolute w-full h-full object-cover top-0 left-0 brightness-[0.2] z-0"
           />
-          <div className="relative px-5 py-9.25 z-10">
+          <div className="relative px-5 py-9.25 lg:px-35 lg:pt-20.5 lg:pb-16 xl:py-25 z-10">
             <h1 className="font-poppins font-bold text-2xl text-center">
               Revolusi Pembelajaran: Temukan Ilmu Baru melalui Platform Video
               Interaktif!
@@ -325,9 +326,7 @@ const Home = () => {
         </div>
       </main>
 
-      <footer className="bg-[#fdf8f2] px-6 py-4 md:px-30 md:py-16">
-        
-      </footer>
+      <Footer />
     </div>
   );
 };
