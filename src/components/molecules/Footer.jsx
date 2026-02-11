@@ -90,22 +90,38 @@ function Footer() {
       </div>
 
       {/* Garis */}
-      <hr className="border-t border-gray-300 w-full mb-4 mt-4" />
+      <hr className="hidden md:block border-t border-gray-300 w-full mb-4 mt-4" />
       {/* Media Sosial dan Copyright Desktop */}
       <div className="hidden md:block w-full mx-auto">
         {/* Baris bawah: copyright kiri + sosmed kanan */}
         <div className="flex justify-between items-center">
           {/* Copyright */}
           <p className="text-base font-dm-sans font-medium text-[#333333AD]">
-            ©2023 Gerobak Sayur All Rights Reserved.
+            ©2023 Ananda Salasa Artha Nugraha All Rights Reserved.
           </p>
 
           {/* Sosial Media */}
           <div className="flex space-x-3.75">
-            <img src={linkedin} alt="LinkedIn" className="w-8.75 h-8.75 rounded-full hover:scale-[1.1]" />
-            <img src={Facebook} alt="Facebook" className="w-8.75 h-8.75 rounded-full hover:scale-[1.1]" />
-            <img src={twitter} alt="Twitter" className="w-8.75 h-8.75 rounded-full hover:scale-[1.1]" />
-            <img src={instagram} alt="Instagram" className="w-8.75 h-8.75 rounded-full hover:scale-[1.1]" />
+            <img
+              src={linkedin}
+              alt="LinkedIn"
+              className="w-8.75 h-8.75 rounded-full cursor-pointer hover:scale-[1.1]"
+            />
+            <img
+              src={Facebook}
+              alt="Facebook"
+              className="w-8.75 h-8.75 rounded-full cursor-pointer hover:scale-[1.1]"
+            />
+            <img
+              src={twitter}
+              alt="Twitter"
+              className="w-8.75 h-8.75 rounded-full cursor-pointer hover:scale-[1.1]"
+            />
+            <img
+              src={instagram}
+              alt="Instagram"
+              className="w-8.75 h-8.75 rounded-full cursor-pointer hover:scale-[1.1]"
+            />
           </div>
         </div>
       </div>

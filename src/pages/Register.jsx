@@ -1,4 +1,4 @@
-import NavBar from "../components/layout/NavBar";
+import NavBar from "../components/molecules/NavBarAuth";
 import FormRegister from "../components/molecules/FormRegister";
 import AuthLayout from "../components/layout/AuthLayout";
 

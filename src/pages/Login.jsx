@@ -1,5 +1,5 @@
 import AuthLayout from "../components/layout/AuthLayout";
-import NavBar from "../components/layout/NavBar";
+import NavBar from "../components/molecules/NavBarAuth";
 import FormLogin from "../components/molecules/FormLogin";
 
 const Login = () => {
